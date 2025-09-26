@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
 
         {/* Coluna Direita - Endereço e Links Legais */}
-        <div className="space-y-6 col-span-1 md:col-span-1 flex flex-col items-center  md:items-end justify-center md:justify-end text-center md:text-right ">
+        <div className="space-y-6 col-span-1 md:col-span-1 flex flex-col items-center  md:items-end justify-center md:justify-start  text-center md:text-right ">
           {/* Ícones ODS */}
           {/* <div className="flex gap-4 justify-center md:justify-end">
             <img
@@ -101,7 +101,12 @@ export default function Footer() {
           </div>
 
           {/* Links Legais */}
-          <div className="flex gap-6 justify-center md:justify-end pt-4">
+        </div>
+        <div className="col-span-2 pt-10 flex justify-between">
+          <p className="text-white/70 text-xs">
+            © 2025 Alexandria Energia. Todos os direitos reservados.
+          </p>
+          <div className="flex gap-6 justify-center md:justify-end">
             <a
               href="#"
               className="text-white/70 text-xs underline hover:text-white transition-colors"
@@ -116,11 +121,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
-      <div className="pt-10 text-center ">
-        <p className="text-white/70 text-xs">
-          © 2025 Alexandria Energia. Todos os direitos reservados.
-        </p>
       </div>
     </footer>
   );

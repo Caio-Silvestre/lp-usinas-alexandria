@@ -1,5 +1,5 @@
 import ApprovalFlowSection from "./ApprovalFlowSection";
-import LexEnergyAllianceCard from "./LexEnergyAllianceCard";
+import LexEnergyAllianceCardV2Main from "./LexEnergyAllianceCardV2Main";
 
 export default function ApprovalSection() {
   return (
@@ -12,7 +12,7 @@ export default function ApprovalSection() {
 
         {/* Coluna 2: Lex Energy Alliance Card */}
         <div>
-          <LexEnergyAllianceCard />
+          <LexEnergyAllianceCardV2Main />
         </div>
       </div>
     </section>

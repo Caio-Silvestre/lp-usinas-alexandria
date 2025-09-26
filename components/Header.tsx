@@ -45,7 +45,7 @@ export default function Header() {
         grid grid-cols-1 md:grid-cols-3 
         z-10 m-0 md:mx-auto min-h-[75vh] md:min-h-[88vh] md:w-[70%] w-full 
         animate-fade-left 
-        px-8 pt-[100px] md:pt-0 md:px-0 md:gap-x-4
+        px-8 pt-[80px] md:pt-0 md:px-0 md:gap-x-4
         text-left text-white 
         flex-col items-center md:flex-row "
       >
@@ -87,7 +87,7 @@ export default function Header() {
         </div>
 
         {/* Versão Mobile - Carrossel */}
-        <div className="animate-fade-in mt-10 md:mt-12 w-full col-span-3 md:hidden py-[24px]">
+        <div className="animate-fade-in mt-10 md:mt-12 w-full col-span-3 md:hidden py-[24px] rounded-[8px]">
           <StatsCarousel />
         </div>
       </div>

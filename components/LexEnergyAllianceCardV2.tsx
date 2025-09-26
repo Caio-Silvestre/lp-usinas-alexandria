@@ -32,7 +32,7 @@ export default function LexEnergyAllianceCardV2({
         />
 
         <div className="mt-8 grid grid-cols-1 gap-10 md:mt-12 md:grid-cols-2">
-          <div className="flex flex-col items-center justify-center gap-6 text-white">
+          <div className="flex flex-col items-center justify-center gap-6 text-white h-[80vh]">
             <div className="w-14 h-14 flex items-center justify-center">
               <Image
                 src="/svgs/lex_energy_alliance_vazada_branca_quadrada.svg"
@@ -43,22 +43,30 @@ export default function LexEnergyAllianceCardV2({
               />
             </div>
             <div>
-              <h1 className="text-4xl font-semibold leading-tight">
-                Alexandria
+              <h1
+                className="text-4xl font-normal"
+                style={{ fontFamily: "Work Sans" }}
+              >
+                Lex Energy
               </h1>
-              <h2 className="text-4xl font-extrabold tracking-wide">Energia</h2>
+              <h2
+                className="text-4xl font-bold tracking-wide"
+                style={{ fontFamily: "Work Sans" }}
+              >
+                Alliance
+              </h2>
             </div>
             <p className="max-w-xl text-sm text-white/80 text-center">
-              Transformamos o mercado de energia com{" "}
+              Resolvemos o maior desafio da sua usina:{" "}
               <span className="font-semibold text-white">
-                tecnologia inovadora e parcerias estratégicas
+                manter ela cheia, rentável e segura.
               </span>
               .
             </p>
             <p className="max-w-xl text-sm text-white/80 text-center">
-              Nossa plataforma conecta usinas, clientes e investidores em um
-              ecossistema integrado que maximiza a eficiência energética e
-              garante retornos sustentáveis para todos os participantes.
+              Enquanto assumimos toda a operação crítica, você participa de uma
+              comunidade colaborativa, com informações estratégicas do setor de
+              energia e fortalece sua reputação de forma gratuita.
             </p>
             <div className="flex justify-center items-center w-full gap-3">
               <Button
