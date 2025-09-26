@@ -25,7 +25,7 @@ export default function ImpactCards() {
   return (
     <div
       className="flex flex-col items-start justify-between 
-      w-full gap-5"
+      w-full gap-5 min-h-[400px]"
     >
       <span className="inline-flex w-max items-center rounded-full border p-[12px] text-xs text-[#666666]">
         Serviços

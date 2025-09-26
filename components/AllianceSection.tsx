@@ -20,7 +20,6 @@ export default function AllianceSection() {
               <div className="h-[258px] overflow-hidden rounded-tl-[8px] rounded-tr-[24px] rounded-br-[8px] rounded-bl-[24px]">
                 <video
                   src="/videos/usinas-eolicas.mp4"
-                  alt="Usinas eólicas em operação"
                   width={100}
                   height={100}
                   autoPlay
