@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import SectionTitle from "./ui/SectionTitle";
 import {
   GearIcon,
   FoldersIcon,
@@ -134,9 +135,7 @@ export default function FAQSection() {
 
   return (
     <section className="w-full">
-      <span className="inline-flex w-max items-center rounded-full border p-[12px] text-xs text-[#666666]">
-        F A Q
-      </span>
+      <SectionTitle>F A Q</SectionTitle>
 
       <div className="grid grid-cols-3 gap-8">
         {/* Coluna Esquerda - Seleção de Temas */}

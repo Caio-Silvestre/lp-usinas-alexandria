@@ -27,8 +27,8 @@ export default function LexEnergyAllianceCard() {
   if (showFlow) {
     return (
       <div
-        className={`absolute right-0 z-80 overflow-hidden transition-left duration-500 ease-out ${
-          expanded ? "w-screen" : "w-0"
+        className={`absolute  z-80 overflow-hidden transition-all duration-500 ease-out ${
+          expanded ? "left-0 w-screen" : "w-0"
         } bg-[url('/images/full-background.png')] bg-cover bg-center`}
       >
         <div className=" relative h-full w-full px-6 md:px-12 py-8 md:py-12">
@@ -117,7 +117,7 @@ export default function LexEnergyAllianceCard() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`flex flex-col justify-center items-center p-6  w-full h-full ${
-        isHovered
+        isHovered || expanded
           ? "bg-[url('/images/full-background.png')] bg-cover bg-center"
           : "bg-[#FAFAFA] text-[#f5f5f5]"
       }`}

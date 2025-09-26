@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { PartnerFormModal } from "@/components/PartnerFormModal";
+import SectionTitle from "./ui/SectionTitle";
 
 export default function AllianceSection() {
   return (
     <section className="w-full">
       <div className="flex flex-col items-start justify-between w-full gap-5 ">
-        <span className="inline-flex w-max items-center rounded-full border p-[12px] text-xs text-[#666666]">
-          Lex Energy Alliance
-        </span>
+        <SectionTitle>Lex Energy Alliance</SectionTitle>
 
         <div className="mx-auto grid w-full grid-cols-2 gap-8">
           {/* Coluna esquerda */}

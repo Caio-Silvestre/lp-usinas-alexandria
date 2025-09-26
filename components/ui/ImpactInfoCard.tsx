@@ -22,11 +22,11 @@ export function ImpactInfoCard({
     <Card
       className={
         isDark
-          ? "bg-[#1A1A1A]/90 text-white bg-[url('/images/dark-background.png')] bg-cover bg-center rounded-[8px]"
-          : "bg-white/80 text-[#1A1A1A] bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-[8px]"
+          ? "md:h-[60vh] bg-[#1A1A1A]/90 text-white bg-[url('/images/dark-background.png')] bg-cover bg-center rounded-[8px]"
+          : "md:h-[60vh] bg-white/80 text-[#1A1A1A] bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-[8px]"
       }
     >
-      <CardContent className="space-y-4 p-6">
+      <CardContent className="flex flex-col justify-between space-y-4 p-6 h-full">
         <h3 className="text-base font-semibold">{title}</h3>
         <p
           className={
@@ -43,7 +43,7 @@ export function ImpactInfoCard({
             className={
               isDark
                 ? "border-1 border-border-alexandria-secondary-gradient bg-white/80 hover:bg-alexandria-secondary-gradient rounded-[8px] p-[1.5px] w-full max-w-[320px] justify-between text-white"
-                : "border-1 border-border-alexandria-secondary-gradient bg-[#1A1A1A] hover:bg-alexandria-secondary-gradient rounded-[8px] p-[1.5px] w-full max-w-[320px] justify-between text-[#1A1A1A]"
+                : "border-1 border-border-alexandria-secondary-gradient bg-[#B3B3B3] hover:bg-alexandria-secondary-gradient rounded-[8px] p-[1.5px] w-full max-w-[320px] justify-between text-[#1A1A1A]"
             }
             onClick={onToggle}
           >

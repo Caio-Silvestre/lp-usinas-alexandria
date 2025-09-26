@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { PartnerFormModal } from "@/components/PartnerFormModal";
+import SectionTitle from "./ui/SectionTitle";
 
 export default function ClosingSection() {
   return (
     <section className="w-full">
       <div className="flex flex-col items-start justify-between w-full ">
-        <span className="inline-flex w-max items-center rounded-full border p-[12px] text-xs text-[#666666]">
-          Serviços
-        </span>
+        <SectionTitle>Serviços</SectionTitle>
 
         <div className="mx-auto grid w-full grid-cols-2 gap-8">
           {/* Coluna esquerda - Texto + Imagem maior */}

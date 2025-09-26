@@ -54,7 +54,6 @@ export default function Home() {
           <ClosingSection />
         </section>
       </div>
-      <Footer />
 
       {/* CTA fixo no mobile */}
       <MobileFixedCTA />

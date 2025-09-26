@@ -22,7 +22,7 @@ export default function PartnersCarousel() {
         </p>
       </div>
       <div className="relative w-full overflow-hidden">
-        <div className="flex w-max animate-[scroll_30s_linear_infinite] gap-8 pr-8">
+        <div className="flex w-max animate-[scroll_30s_linear_infinite] gap-8 pr-8 max-w-none">
           {items.map((src, i) => (
             <div key={i} className="shrink-0">
               <Image

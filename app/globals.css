@@ -22,6 +22,9 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 @layer utilities {

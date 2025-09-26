@@ -8,14 +8,19 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="p-16 pb-20 md:pb-16  relative w-full bg-[url('/images/full-background.png')] bg-cover bg-center\">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <footer className="py-16 pb-20 md:pb-16  relative w-full bg-[url('/images/full-background.png')] bg-cover bg-center\">
+      <div className="grid grid-cols-1 gap-x-4 md:grid-cols-2 animate-fade-left  mx-auto md:w-[70%] w-[86%] ">
         {/* Coluna Esquerda - Informações da Empresa */}
-        <div className="space-y-6">
+        <div className="space-y-6 col-span-2 md:col-span-1">
           {/* Logo e Tagline */}
-          <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold text-white mb-2">Alexandria</h2>
-            <p className="text-white text-lg">A energia em seu poder.</p>
+          <div className="w-full flex flex-col items-center md:items-start justify-center">
+            <Image
+              src="/svgs/logoAlexandria.svg"
+              alt="Alexandria"
+              width={182}
+              height={59}
+              className="mb-2"
+            />
           </div>
 
           {/* Missão */}
@@ -70,7 +75,7 @@ export default function Footer() {
         </div>
 
         {/* Coluna Direita - Endereço e Links Legais */}
-        <div className="space-y-6 flex flex-col items-end justify-end  text-right ">
+        <div className="space-y-6 col-span-1 md:col-span-1 flex flex-col items-center  md:items-end justify-center md:justify-end text-center md:text-right ">
           {/* Ícones ODS */}
           {/* <div className="flex gap-4 justify-center md:justify-end">
             <img
@@ -112,7 +117,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="pt-4 text-center">
+      <div className="pt-10 text-center ">
         <p className="text-white/70 text-xs">
           © 2025 Alexandria Energia. Todos os direitos reservados.
         </p>

@@ -3,6 +3,7 @@ import { Glory } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Toaster } from "sonner";
+import Footer from "@/components/Footer";
 
 const glory = Glory({
   variable: "--font-glory",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${glory.variable} antialiased`}>
         <Header />
         <main>{children}</main>
+        <Footer />
         <Toaster richColors position="top-right" />
       </body>
     </html>
