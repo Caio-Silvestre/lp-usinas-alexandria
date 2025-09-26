@@ -18,11 +18,15 @@ export default function AllianceSection() {
 
             <div className="bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-tl-[12px] rounded-tr-[32px] rounded-br-[12px] rounded-bl-[32px] border p-4">
               <div className="h-[258px] overflow-hidden rounded-tl-[8px] rounded-tr-[24px] rounded-br-[8px] rounded-bl-[24px]">
-                <Image
-                  src="/videos/usinas-eolicas.gif"
+                <video
+                  src="/videos/usinas-eolicas.mp4"
                   alt="Usinas eólicas em operação"
                   width={100}
                   height={100}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="h-full w-full object-cover"
                 />
               </div>
