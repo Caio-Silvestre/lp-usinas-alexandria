@@ -27,7 +27,7 @@ export default function LexEnergyAllianceCard() {
   if (showFlow) {
     return (
       <div
-        className={`absolute left-0 z-80 overflow-hidden transition-left duration-500 ease-out ${
+        className={`absolute right-0 z-80 overflow-hidden transition-left duration-500 ease-out ${
           expanded ? "w-screen" : "w-0"
         } bg-[url('/images/full-background.png')] bg-cover bg-center`}
       >
