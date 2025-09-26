@@ -45,15 +45,21 @@ export default function Header() {
         grid grid-cols-1 md:grid-cols-3 
         z-10 m-0 md:mx-auto min-h-[75vh] md:min-h-[88vh] md:w-[70%] w-full 
         animate-fade-left 
-        px-8 pt-[200px] md:pt-0 md:px-24 md:gap-x-4
+        px-8 pt-[100px] md:pt-0 md:px-0 md:gap-x-4
         text-left text-white 
         flex-col items-center md:flex-row "
       >
         <div className="animate-fade-in  w-full max-w-[550px] md:w-100 mt-2 md:mt-12 gap-4 col-span-3 md:col-span-2 ">
-          <h1 className="text-balance text-3xl font-semibold leading-tight md:text-5xl">
+          <h1
+            className="text-balance text-3xl font-semibold leading-tight md:text-5xl"
+            style={{ fontFamily: "Work Sans" }}
+          >
             Usinas com mais clientes, menos riscos e com retorno previsível.
           </h1>
-          <p className="mt-4  text-pretty text-base text-gray-200 md:text-lg">
+          <p
+            className="mt-4  text-pretty text-base text-gray-200 md:text-lg"
+            style={{ fontFamily: "Work Sans" }}
+          >
             Com a Alexandria e a Lex Energy Alliance, sua operação ganha
             clientes recorrentes, faturamento garantido e segurança operacional.
           </p>
@@ -81,7 +87,7 @@ export default function Header() {
         </div>
 
         {/* Versão Mobile - Carrossel */}
-        <div className="animate-fade-in mt-10 md:mt-12 w-full col-span-3 md:hidden py-[24px] px-[10px]">
+        <div className="animate-fade-in mt-10 md:mt-12 w-full col-span-3 md:hidden py-[24px]">
           <StatsCarousel />
         </div>
       </div>

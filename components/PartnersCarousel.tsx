@@ -30,7 +30,7 @@ export default function PartnersCarousel() {
                 alt={`logo-${i}`}
                 width={176}
                 height={100}
-                className="h-full w-[176px] object-contain"
+                className="h-full w-[100px] md:w-[176px] object-contain"
               />
             </div>
           ))}

@@ -52,10 +52,16 @@ export default function LexEnergyAllianceCard() {
                 />
               </div>
               <div>
-                <h1 className="text-4xl font-semibold leading-tight">
+                <h1
+                  className="text-4xl font-normal"
+                  style={{ fontFamily: "Work Sans" }}
+                >
                   Lex Energy
                 </h1>
-                <h2 className="text-4xl font-extrabold tracking-wide">
+                <h2
+                  className="text-4xl font-bold tracking-wide"
+                  style={{ fontFamily: "Work Sans" }}
+                >
                   Alliance
                 </h2>
               </div>
@@ -144,14 +150,17 @@ export default function LexEnergyAllianceCard() {
               />
             )}
           </div>
+
           <h2
-            className={`text-2xl font-bold mb-4 ${
+            className={`text-2xl font-normal mb-4 font-normal  ${
               isHovered ? "text-white" : "text-[#1A1A1A]"
             }`}
           >
             Lex Energy
             <br />
-            Alliance
+            <span className="font-bold" style={{ fontFamily: "Work Sans" }}>
+              Alliance
+            </span>
           </h2>
         </div>
 

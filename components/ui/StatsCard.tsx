@@ -22,7 +22,12 @@ export default function StatsCard({
         <IconComponent size={32} weight="fill" />
       </div>
       <div className="text-left w-max-content">
-        <p className="text-[20px] pt-[12px] font-semibold">{title}</p>
+        <p
+          className="text-[20px] pt-[12px] font-semibold"
+          style={{ fontFamily: "Work Sans" }}
+        >
+          {title}
+        </p>
         <p className="text-[16px] pt-[4px] text-gray-200">{subtitle}</p>
       </div>
     </div>

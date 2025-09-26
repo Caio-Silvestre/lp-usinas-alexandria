@@ -5,13 +5,16 @@ import SectionTitle from "./ui/SectionTitle";
 export default function AllianceSection() {
   return (
     <section className="w-full">
-      <div className="flex flex-col items-start justify-between w-full gap-5 ">
+      <div className="flex flex-col items-start justify-between w-full ">
         <SectionTitle>Lex Energy Alliance</SectionTitle>
 
         <div className="mx-auto grid w-full grid-cols-2 gap-8">
           {/* Coluna esquerda */}
           <div className=" col-span-2 md:col-span-1 flex flex-col gap-4 h-full">
-            <h2 className="text-3xl font-semibold text-[#1A1A1A]">
+            <h2
+              className="text-3xl font-semibold text-[#1A1A1A]"
+              style={{ fontFamily: "Work Sans" }}
+            >
               Previsibilidade para a operação. Reputação para o mercado.
             </h2>
 
@@ -29,7 +32,10 @@ export default function AllianceSection() {
                 />
               </div>
               <div className="mt-4">
-                <h3 className="text-sm font-semibold text-[#1A1A1A]">
+                <h3
+                  className="text-sm font-semibold text-[#1A1A1A]"
+                  style={{ fontFamily: "Work Sans" }}
+                >
                   O que é Lex Energy Alliance?
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-[#666666] text-[14px]">
@@ -46,9 +52,12 @@ export default function AllianceSection() {
           </div>
 
           {/* Coluna direita */}
-          <div className="col-span-2 md:col-span-1 flex flex-col items-stretch gap-4">
+          <div className="col-span-2 md:col-span-1 flex flex-col items-stretch gap-10">
             <div className="flex flex-col gap-3">
-              <h3 className="text-lg font-semibold text-[#1A1A1A] text-[24px]">
+              <h3
+                className="text-lg font-semibold text-[#1A1A1A] text-[24px]"
+                style={{ fontFamily: "Work Sans" }}
+              >
                 Tenha um diferencial competitivo que garanta que sua usina nunca
                 fique no risco da vacância.
               </h3>

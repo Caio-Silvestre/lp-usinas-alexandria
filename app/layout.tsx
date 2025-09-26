@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Glory } from "next/font/google";
+import { Glory, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Toaster } from "sonner";
@@ -7,6 +7,12 @@ import Footer from "@/components/Footer";
 
 const glory = Glory({
   variable: "--font-glory",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -23,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${glory.variable} antialiased`}>
+      <body className={`${glory.variable} ${workSans.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

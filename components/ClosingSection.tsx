@@ -6,12 +6,15 @@ export default function ClosingSection() {
   return (
     <section className="w-full">
       <div className="flex flex-col items-start justify-between w-full ">
-        <SectionTitle>Serviços</SectionTitle>
+        <SectionTitle>Sobre</SectionTitle>
 
         <div className="mx-auto grid w-full grid-cols-2 gap-8">
           {/* Coluna esquerda - Texto + Imagem maior */}
           <div className="col-span-2 md:col-span-1 flex flex-col gap-4 h-full">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#1A1A1A]">
+            <h2
+              className="text-3xl md:text-4xl font-semibold text-[#1A1A1A]"
+              style={{ fontFamily: "Work Sans" }}
+            >
               Energia que move confiança
             </h2>
             <p className="text-sm leading-6 text-[#666666] md:text-[14px]">

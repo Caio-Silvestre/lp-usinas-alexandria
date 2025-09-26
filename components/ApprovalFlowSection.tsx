@@ -24,7 +24,10 @@ const steps = [
 export default function ApprovalFlowSection() {
   return (
     <div className="bg-white p-6 rounded-lg">
-      <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">
+      <h2
+        className="text-2xl font-semibold text-[#1A1A1A] mb-6"
+        style={{ fontFamily: "Work Sans" }}
+      >
         Fluxo de aprovação
       </h2>
 
@@ -32,12 +35,18 @@ export default function ApprovalFlowSection() {
         {steps.map((step) => (
           <div key={step.number} className="flex gap-4">
             <div className="flex-shrink-0">
-              <div className="w-8 h-8  flex items-center justify-center text-sm font-semibold">
+              <div
+                className="w-8 h-8  flex items-center justify-center text-sm font-semibold"
+                style={{ fontFamily: "Work Sans" }}
+              >
                 {step.number}
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-base font-semibold text-[#1A1A1A] mb-2">
+              <h3
+                className="text-base font-semibold text-[#1A1A1A] mb-[8px]"
+                style={{ fontFamily: "Work Sans" }}
+              >
                 {step.title}
               </h3>
               <p className="text-sm text-[#666666] leading-6">

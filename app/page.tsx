@@ -16,7 +16,7 @@ export default function Home() {
       <div className="w-full flex-col items-center justify-center py-[51px] bg-[#FAFAFA]">
         <section
           id="impacto"
-          className="animate-fade-left  mx-auto md:w-[70%] w-[86%] min-h-[70vh]"
+          className="animate-fade-left  mx-auto md:w-[70%] w-[86%] h-[108vh] md:min-h-[70vh] md:max-h-[70vh]"
         >
           <ImpactCards />
         </section>
