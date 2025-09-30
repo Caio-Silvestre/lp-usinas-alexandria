@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { PartnerFormModal } from "./PartnerFormModal";
 
 export default function MobileFixedCTA() {
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
 
   // useEffect(() => {
   //   const handleScroll = () => {

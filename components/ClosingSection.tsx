@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PartnerFormModal } from "@/components/PartnerFormModal";
 import SectionTitle from "./ui/SectionTitle";
 
 export default function ClosingSection() {
@@ -12,7 +11,7 @@ export default function ClosingSection() {
           {/* Coluna esquerda - Texto + Imagem maior */}
           <div className="col-span-2 md:col-span-1 flex flex-col gap-4 h-full">
             <h2
-              className="text-3xl md:text-4xl font-semibold text-[#1A1A1A]"
+              className="text-[20px] md:text-4xl font-semibold text-[#1A1A1A]"
               style={{ fontFamily: "Work Sans" }}
             >
               Energia que move confiança

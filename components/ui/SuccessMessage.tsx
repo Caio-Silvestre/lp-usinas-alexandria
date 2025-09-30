@@ -114,7 +114,7 @@ export function SuccessMessage({
           onClick={onClose}
         >
           <span
-            className={`hover:bg-white/80 flex justify-center items-center w-full h-full rounded-[8px] bg-white text-[#383838]
+            className={`hover:bg-white/80 flex justify-center items-center w-full h-[-webkit-fill-available] rounded-[8px] bg-white text-[#383838]
                `}
           >
             Fechar

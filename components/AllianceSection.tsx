@@ -12,7 +12,7 @@ export default function AllianceSection() {
           {/* Coluna esquerda */}
           <div className=" col-span-2 md:col-span-1 flex flex-col gap-4 h-full">
             <h2
-              className="text-3xl font-semibold text-[#1A1A1A]"
+              className="text-[20px] md:text-3xl font-semibold text-[#1A1A1A]"
               style={{ fontFamily: "Work Sans" }}
             >
               Previsibilidade para a operação. Reputação para o mercado.
@@ -55,7 +55,7 @@ export default function AllianceSection() {
           <div className="col-span-2 md:col-span-1 flex flex-col items-stretch gap-10">
             <div className="flex flex-col gap-3">
               <h3
-                className="text-lg font-semibold text-[#1A1A1A] text-[24px]"
+                className="text-[20px] md:text-[24px] font-semibold text-[#1A1A1A]"
                 style={{ fontFamily: "Work Sans" }}
               >
                 Tenha um diferencial competitivo que garanta que sua usina nunca

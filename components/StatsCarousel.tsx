@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import {
   ChartLineDownIcon,
   HandCoinsIcon,
@@ -34,8 +34,6 @@ const statsData = baseStatsData;
 
 export default function StatsCarousel() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Função para iniciar o auto-scroll
   // const startAutoScroll = () => {

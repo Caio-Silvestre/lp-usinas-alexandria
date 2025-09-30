@@ -44,7 +44,7 @@ export default function LexEnergyAllianceCardV2Main() {
           : "bg-[#FAFAFA] text-[#f5f5f5]"
       }`}
     >
-      <div className="space-y-6">
+      <div className="space-y-6 w-full">
         <div className="text-center">
           <div
             className={`w-12 h-12 mx-auto mb-4 rounded-lg flex items-center justify-center`}

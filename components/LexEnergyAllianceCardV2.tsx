@@ -50,8 +50,8 @@ export default function LexEnergyAllianceCardV2({
           className="hidden md:absolute right-12 top-0"
         />
 
-        <div className="mt-8 grid grid-cols-1 gap-32 md:mt-12 md:grid-cols-2">
-          <div className="flex flex-col items-center justify-center gap-6 text-white h-[80vh]">
+        <div className="mt-8 grid grid-cols-1 gap-20 md:gap-32 md:mt-12 md:grid-cols-2">
+          <div className="order-2 md:order-1 flex flex-col items-center justify-center gap-6 text-white sm:h-[60vh] md:h-[80vh]">
             <div className="w-14 h-14 flex items-center justify-center">
               <Image
                 src="/svgs/lex_energy_alliance_vazada_branca_quadrada.svg"
@@ -112,7 +112,7 @@ export default function LexEnergyAllianceCardV2({
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 text-white">
+          <div className="order-1 md:order-2 flex flex-col gap-6 text-white">
             <div>
               <span className="inline-flex rounded-full border border-white/20 px-3 py-1 text-xs text-white/70">
                 Benefícios

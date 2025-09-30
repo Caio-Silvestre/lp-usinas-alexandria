@@ -5,7 +5,6 @@ import Image from "next/image";
 import SectionTitle from "./ui/SectionTitle";
 import {
   GearIcon,
-  FoldersIcon,
   ScrollIcon,
   CurrencyCircleDollarIcon,
   type IconProps,
@@ -130,6 +129,7 @@ export default function FAQSection() {
   );
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
   const [hoveredQuestion, setHoveredQuestion] = useState<number | null>(null);
+  const [isMobileSelectOpen, setIsMobileSelectOpen] = useState(false);
 
   const currentTheme = faqThemes.find((theme) => theme.id === selectedTheme);
 
@@ -137,11 +137,11 @@ export default function FAQSection() {
     <section className="w-full">
       <SectionTitle>F A Q</SectionTitle>
 
-      <div className="grid grid-cols-3 gap-[100px]">
+      <div className="grid grid-cols-3 gap-[32px] md:gap-[100px]">
         {/* Coluna Esquerda - Seleção de Temas */}
         <div className="space-y-4 col-span-3 md:col-span-1">
           <div className="h-fit">
-            <h2 className="text-3xl font-semibold text-[#1A1A1A]">
+            <h2 className="text-[20px] md:text-3xl font-semibold text-[#1A1A1A]">
               Perguntas frequentes
             </h2>
             <p className="text-[#333333] text-[14px] max-w-2xl">
@@ -150,25 +150,86 @@ export default function FAQSection() {
               responsabilidades e benefícios para o dono da usina.
             </p>
           </div>
-          {faqThemes.map((theme) => (
-            <button
-              key={theme.id}
-              onClick={() => setSelectedTheme(theme.id)}
-              onMouseEnter={() => setHoveredTheme(theme.id)}
-              onMouseLeave={() => setHoveredTheme(null)}
-              className={`w-full flex items-center gap-3 p-4 rounded-lg text-left transition-all duration-200 ${
-                selectedTheme === theme.id || hoveredTheme === theme.id
-                  ? "bg-[#FAFAFA] text-[#1A1A1A]"
-                  : "hover:bg-[#FAFAFA] text-[#333333]"
-              }`}
-            >
-              <theme.icon
-                size={20}
-                weight={selectedTheme === theme.id ? "fill" : "regular"}
-              />
-              <span className="font-medium">{theme.title}</span>
-            </button>
-          ))}
+
+          {/* Mobile Custom Select */}
+          <div className="md:hidden">
+            <div className="relative">
+              <button
+                onClick={() => setIsMobileSelectOpen(!isMobileSelectOpen)}
+                className="w-full flex items-center gap-3 p-4 rounded-lg border border-gray-300 bg-white text-left transition-all duration-200 hover:bg-gray-50"
+              >
+                {currentTheme && (
+                  <>
+                    <currentTheme.icon
+                      size={20}
+                      weight="fill"
+                      className="text-[#1A1A1A]"
+                    />
+                    <span className="font-medium text-[#333333] flex-1">
+                      {currentTheme.title}
+                    </span>
+                  </>
+                )}
+                <div
+                  className={`transition-transform duration-200 ${
+                    isMobileSelectOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <Image
+                    src="/svgs/ArrowDownDark.svg"
+                    alt="arrow-down"
+                    width={16}
+                    height={16}
+                  />
+                </div>
+              </button>
+
+              {isMobileSelectOpen && (
+                <div className="absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-lg shadow-lg z-10 mt-1">
+                  {faqThemes.map((theme) => (
+                    <button
+                      key={theme.id}
+                      onClick={() => {
+                        setSelectedTheme(theme.id);
+                        setIsMobileSelectOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-3 p-4 text-left transition-all duration-200 first:rounded-t-lg last:rounded-b-lg ${
+                        selectedTheme === theme.id
+                          ? "bg-[#FAFAFA] text-[#1A1A1A]"
+                          : "hover:bg-[#FAFAFA] text-[#333333]"
+                      }`}
+                    >
+                      <theme.icon size={20} className="text-[#1A1A1A]" />
+                      <span className="font-medium">{theme.title}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Desktop Theme Buttons */}
+          <div className="hidden md:block space-y-4">
+            {faqThemes.map((theme) => (
+              <button
+                key={theme.id}
+                onClick={() => setSelectedTheme(theme.id)}
+                onMouseEnter={() => setHoveredTheme(theme.id)}
+                onMouseLeave={() => setHoveredTheme(null)}
+                className={`w-full flex items-center gap-3 p-4 rounded-lg text-left transition-all duration-200 ${
+                  selectedTheme === theme.id || hoveredTheme === theme.id
+                    ? "bg-[#FAFAFA] text-[#1A1A1A]"
+                    : "hover:bg-[#FAFAFA] text-[#333333]"
+                }`}
+              >
+                <theme.icon
+                  size={20}
+                  weight={selectedTheme === theme.id ? "fill" : "regular"}
+                />
+                <span className="font-medium">{theme.title}</span>
+              </button>
+            ))}
+          </div>
 
           <div className="mt-8 hidden md:block">
             <PartnerFormModal />

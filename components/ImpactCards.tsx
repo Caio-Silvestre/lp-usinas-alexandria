@@ -35,7 +35,7 @@ export default function ImpactCards() {
       >
         <div className="w-full md:w-1/2 mb-5 md:mb-16 md:mb-0">
           <h2
-            className="text-3xl font-semibold text-[#1A1A1A] md:text-4xl"
+            className="text-[20px]  font-semibold text-[#1A1A1A] md:text-4xl"
             style={{ fontFamily: "Work Sans" }}
           >
             Sua usina não pode parar na geração. Precisa gerar resultado.

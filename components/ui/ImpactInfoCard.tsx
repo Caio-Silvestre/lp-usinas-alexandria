@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/Card";
+import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { ArrowsClockwiseIcon } from "@phosphor-icons/react/dist/ssr";
 

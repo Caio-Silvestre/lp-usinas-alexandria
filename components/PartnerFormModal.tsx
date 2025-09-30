@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { z } from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, type Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Dialog,
@@ -30,12 +30,13 @@ const schema = z.object({
     .regex(/\(\d{2}\)\s?\d{5}-\d{4}/, "Use o formato (00) 00000-0000"),
   email: z.string().email("E-mail inválido"),
   energyType: z.string().min(1, "Campo obrigatório"),
-  plantPower: z.string().min(1, "Campo obrigatório"),
+  plantPower: z.coerce.number().min(1, "Informe um valor maior que 0"),
   state: z.string().length(2, "Selecione a UF"),
   city: z.string().min(1, "Campo obrigatório"),
 });
 
-type FormValues = z.infer<typeof schema>;
+type FormInput = z.input<typeof schema>; // valores antes da coerção
+type FormOutput = z.output<typeof schema>; // valores após a coerção
 
 const states = [
   { nome: "Acre", uf: "AC" },
@@ -84,15 +85,15 @@ export function PartnerFormModal({
     phone: string;
   } | null>(null);
 
-  const methods = useForm<FormValues>({
-    resolver: zodResolver(schema),
+  const methods = useForm<FormInput, undefined, FormOutput>({
+    resolver: zodResolver(schema) as Resolver<FormInput, undefined, FormOutput>,
     defaultValues: {
       role: "",
       fullName: "",
       phone: "",
       email: "",
       energyType: "",
-      plantPower: "",
+      plantPower: 0,
       state: "",
       city: "",
     },
@@ -126,7 +127,7 @@ export function PartnerFormModal({
     fetchCities();
   }, [stateValue]);
 
-  async function onSubmit(values: FormValues) {
+  async function onSubmit(values: FormOutput) {
     try {
       setSubmitError(null);
       // Log dos valores e URL fake para futura integração
@@ -293,9 +294,13 @@ export function PartnerFormModal({
                     <Label htmlFor="plantPower">Potência da usina</Label>
                     <Input
                       id="plantPower"
+                      type="number"
+                      min="1"
                       placeholder="kW"
                       inputMode="numeric"
-                      {...methods.register("plantPower")}
+                      {...methods.register("plantPower", {
+                        valueAsNumber: true,
+                      })}
                     />
                     <p className="text-xs text-[#333333] mt-1">
                       *Campo obrigatório

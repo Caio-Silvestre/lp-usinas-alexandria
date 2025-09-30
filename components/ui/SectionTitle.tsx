@@ -9,7 +9,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <span
-      className={`mb-[12px] inline-flex w-max items-center rounded-full border p-[8px] text-xs text-[#333333] border-[#B3B3B3] ${className}`}
+      className={`mb-[12px] inline-flex w-max items-center font-bold rounded-full border p-[8px] text-xs text-[#333333] border-[#B3B3B3] ${className}`}
     >
       {children}
     </span>

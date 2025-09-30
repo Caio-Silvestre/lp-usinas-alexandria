@@ -1,3 +1,4 @@
+import Image from "next/image";
 interface ErrorMessageProps {
   title?: string;
   message?: string;
@@ -13,11 +14,13 @@ export function ErrorMessage({
     <div
       className={`rounde-[8px] flex items-start gap-3 rounded-lg bg-red-50 border border-red-200 p-4 ${className}`}
     >
-      <img
+      <Image
         src="/svgs/TriangleWarningIcon.svg"
         alt="Aviso"
+        width={20}
+        height={20}
         className="w-5 h-5 flex-shrink-0 mt-0.5"
-        aria-hidden="true"
+        aria-hidden
       />
       <div className="flex flex-col gap-1">
         <h4 className="text-sm font-semibold text-red-700 leading-tight">

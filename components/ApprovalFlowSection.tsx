@@ -25,7 +25,7 @@ export default function ApprovalFlowSection() {
   return (
     <div className="bg-white p-6 rounded-lg">
       <h2
-        className="text-2xl font-semibold text-[#1A1A1A] mb-6"
+        className="text-[20px] md:text-2xl font-semibold text-[#1A1A1A] mb-6"
         style={{ fontFamily: "Work Sans" }}
       >
         Fluxo de aprovação

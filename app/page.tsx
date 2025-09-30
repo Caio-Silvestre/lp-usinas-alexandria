@@ -3,7 +3,6 @@ import ImpactCards from "@/components/ImpactCards";
 import AllianceSection from "@/components/AllianceSection";
 import ApprovalSection from "@/components/ApprovalSection";
 import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
 import MobileFixedCTA from "@/components/MobileFixedCTA";
 import ClosingSection from "@/components/ClosingSection";
 
@@ -41,7 +40,7 @@ export default function Home() {
       <div className="w-full flex-col items-center justify-center py-[51px] ">
         <section
           id="faq"
-          className="animate-fade-right mx-auto md:w-[70%] w-[86%] min-h-[80vh]"
+          className="animate-fade-right mx-auto md:w-[70%] w-[86%] min-h-[60vh] md:min-h-[80vh]"
         >
           <FAQSection />
         </section>

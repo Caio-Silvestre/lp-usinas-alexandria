@@ -51,19 +51,16 @@ export default function Header() {
       >
         <div className="animate-fade-in  w-full max-w-[550px] md:w-100 mt-2 md:mt-12 gap-4 col-span-3 md:col-span-2 ">
           <h1
-            className="text-balance text-3xl font-semibold leading-tight md:text-5xl"
+            className="text-balance text-[20px] md:text-3xl font-semibold leading-tight md:text-5xl mb-[12px]"
             style={{ fontFamily: "Work Sans" }}
           >
             Usinas com mais clientes, menos riscos e com retorno previsível.
           </h1>
-          <p
-            className="mt-4  text-pretty text-base text-gray-200 md:text-lg"
-            style={{ fontFamily: "Work Sans" }}
-          >
+          <p className="mt-4  text-pretty text-base text-gray-200 md:text-lg">
             Com a Alexandria e a Lex Energy Alliance, sua operação ganha
             clientes recorrentes, faturamento garantido e segurança operacional.
           </p>
-          <div className="mt-8 hidden md:block ">
+          <div className="mt-[32px] hidden md:block ">
             <PartnerFormModal />
           </div>
         </div>
