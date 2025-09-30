@@ -51,7 +51,7 @@ export default function Header() {
       >
         <div className="animate-fade-in  w-full max-w-[550px] md:w-100 mt-2 md:mt-12 gap-4 col-span-3 md:col-span-2 ">
           <h1
-            className="text-balance text-[20px] md:text-3xl font-semibold leading-tight md:text-5xl mb-[12px]"
+            className="text-balance text-[32px] md:text-[20px] md:text-3xl font-semibold leading-tight md:text-5xl mb-[12px] mr-20 md:mr-0"
             style={{ fontFamily: "Work Sans" }}
           >
             Usinas com mais clientes, menos riscos e com retorno previsível.
