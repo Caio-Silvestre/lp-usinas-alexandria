@@ -5,6 +5,7 @@ import ApprovalSection from "@/components/ApprovalSection";
 import FAQSection from "@/components/FAQSection";
 import MobileFixedCTA from "@/components/MobileFixedCTA";
 import ClosingSection from "@/components/ClosingSection";
+import { PartnerFormModal } from "@/components/PartnerFormModal";
 
 export default function Home() {
   return (
@@ -56,6 +57,11 @@ export default function Home() {
 
       {/* CTA fixo no mobile */}
       <MobileFixedCTA />
+      {/* <div className="md:hidden fixed inset-x-0 bottom-0 z-50  p-3 animate-fade-left">
+        <div className="mx-auto max-w-7xl px-4 flex justify-center">
+          <PartnerFormModal triggerClassName="w-full" />
+        </div>
+      </div> */}
     </div>
   );
 }

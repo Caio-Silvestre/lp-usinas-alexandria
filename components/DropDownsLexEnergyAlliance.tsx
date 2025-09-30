@@ -104,21 +104,21 @@ export default function DropDownsLexEnergyAlliance() {
                 ${openDropdown === index ? "rotate-180" : "rotate-0"}
               `}
             >
-              {openDropdown === index || hoveredDropdown === index ? (
+              {/* {openDropdown === index || hoveredDropdown === index ? (
                 <Image
                   src="/svgs/ArrowDownDegrade.svg"
                   alt="arrow-down"
                   width={16}
                   height={16}
                 />
-              ) : (
-                <Image
-                  src="/svgs/ArrowDown.svg"
-                  alt="arrow-down"
-                  width={16}
-                  height={16}
-                />
-              )}
+              ) : ( */}
+              <Image
+                src="/svgs/ArrowDown.svg"
+                alt="arrow-down"
+                width={16}
+                height={16}
+              />
+              {/* )} */}
             </span>
           </button>
           {openDropdown === index && item.content && (

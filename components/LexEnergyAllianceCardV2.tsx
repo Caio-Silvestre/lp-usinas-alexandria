@@ -101,12 +101,12 @@ export default function LexEnergyAllianceCardV2({
                 }}
               >
                 <span
-                  className={`flex justify-center items-center w-full h-[-webkit-fill-available] rounded-[8px] bg-[#383838] hover:bg-[#383838]/80  text-white`}
+                  className={`flex justify-center items-center w-full h-[43px] rounded-[8px] bg-[#383838] hover:bg-[#383838]/80  text-white`}
                 >
                   Voltar
                 </span>
               </Button>
-              <div className="hidden md:block">
+              <div className="block">
                 <PartnerFormModal triggerClassName="w-full" />
               </div>
             </div>

@@ -55,8 +55,8 @@ export function ImpactInfoCard({
             <span
               className={
                 isDark
-                  ? "sm:text-[8px] md:text-[14px] h-[-webkit-fill-available] bg-[#303030] flex flex-row justify-center items-center w-full  rounded-[8px]"
-                  : "sm:text-[8px] md:text-[14px] h-[-webkit-fill-available] bg-[#f3f3f3] flex flex-row justify-center items-center w-full  rounded-[8px]"
+                  ? "sm:text-[8px] md:text-[14px] h-[43px] bg-[#303030] flex flex-row justify-center items-center w-full  rounded-[8px]"
+                  : "sm:text-[8px] md:text-[14px] h-[43px] bg-[#f3f3f3] flex flex-row justify-center items-center w-full  rounded-[8px]"
               }
             >
               {cta} <ArrowsClockwiseIcon className="hidden md:block ml-2" />

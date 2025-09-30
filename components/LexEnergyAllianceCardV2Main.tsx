@@ -109,7 +109,7 @@ export default function LexEnergyAllianceCardV2Main() {
             onClick={handleButtonClick}
           >
             <span
-              className={`flex justify-center items-center w-full h-[-webkit-fill-available] rounded-[8px]
+              className={`flex justify-center items-center w-full h-[43px] rounded-[8px]
                 ${
                   isHovered
                     ? "bg-[#383838] hover:bg-[#383838]/80 text-white"

@@ -193,7 +193,7 @@ export default function FAQSection() {
                         setSelectedTheme(theme.id);
                         setIsMobileSelectOpen(false);
                       }}
-                      className={`w-full flex items-center gap-3 p-4 text-left transition-all duration-200 first:rounded-t-lg last:rounded-b-lg ${
+                      className={`w-full rounded-[8px] flex items-center gap-3 p-4 text-left transition-all duration-200 first:rounded-t-lg last:rounded-b-lg ${
                         selectedTheme === theme.id
                           ? "bg-[#FAFAFA] text-[#1A1A1A]"
                           : "hover:bg-[#FAFAFA] text-[#333333]"

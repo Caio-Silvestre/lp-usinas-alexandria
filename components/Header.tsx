@@ -56,10 +56,15 @@ export default function Header() {
           >
             Usinas com mais clientes, menos riscos e com retorno previsível.
           </h1>
-          <div className="mt-4 text-pretty text-base text-gray-200 md:text-lg normal-line">
+          <p
+            className="mt-4 text-pretty text-base text-gray-200 md:text-lg md:normal-line"
+            style={{
+              lineHeight: "auto",
+            }}
+          >
             Com a Alexandria e a Lex Energy Alliance, sua operação ganha
             clientes recorrentes, faturamento garantido e segurança operacional.
-          </div>
+          </p>
           <div className="mt-[32px] hidden md:block ">
             <PartnerFormModal />
           </div>
