@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import { PartnerFormModal } from "./PartnerFormModal";
@@ -9,20 +10,38 @@ interface LexEnergyAllianceCardV2Props {
   showFlow: boolean;
   expanded: boolean;
   setShowFlow: (value: boolean) => void;
+  setIsHovered: (value: boolean) => void;
 }
 
 export default function LexEnergyAllianceCardV2({
   showFlow,
   expanded,
   setShowFlow,
+  setIsHovered,
 }: LexEnergyAllianceCardV2Props) {
+  // Controlar scroll da página
+  useEffect(() => {
+    if (showFlow && expanded) {
+      // Desativar scroll da página
+      document.body.style.overflow = "hidden";
+    } else {
+      // Reativar scroll da página
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup: sempre reativar scroll quando componente desmontar
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showFlow, expanded]);
+
   return (
     <div
-      className={`fixed inset-0 z-80 overflow-hidden transition-all duration-1000 ease-out ${
+      className={`fixed inset-0 z-80 overflow-y-auto transition-all duration-400 ease-out ${
         showFlow && expanded ? "opacity-100" : "opacity-0 pointer-events-none"
       } bg-[url('/images/full-background.png')] bg-cover bg-center`}
     >
-      <div className="relative h-full w-full px-6 md:px-12 py-8 md:py-12">
+      <div className="relative min-h-full w-full px-6 md:px-12 py-8 md:py-12">
         <Image
           src="/svgs/lex_energy_alliance_vazada_branca_retangular.svg"
           alt="Lex Energy Alliance"
@@ -31,7 +50,7 @@ export default function LexEnergyAllianceCardV2({
           className="hidden md:absolute right-12 top-0"
         />
 
-        <div className="mt-8 grid grid-cols-1 gap-10 md:mt-12 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-32 md:mt-12 md:grid-cols-2">
           <div className="flex flex-col items-center justify-center gap-6 text-white h-[80vh]">
             <div className="w-14 h-14 flex items-center justify-center">
               <Image
@@ -42,15 +61,15 @@ export default function LexEnergyAllianceCardV2({
                 className="scale-150"
               />
             </div>
-            <div>
+            <div className="flex flex-col justify-center items-center">
               <h1
-                className="text-4xl font-normal"
+                className="text-4xl font-normal text-center"
                 style={{ fontFamily: "Work Sans" }}
               >
                 Lex Energy
               </h1>
               <h2
-                className="text-4xl font-bold tracking-wide"
+                className="text-4xl font-bold tracking-wide text-center"
                 style={{ fontFamily: "Work Sans" }}
               >
                 Alliance
@@ -76,10 +95,13 @@ export default function LexEnergyAllianceCardV2({
               bg-alexandria-primary flex w-1/4 rounded-[8px] p-[2px] justify-center items-center gap-2
                  
                  `}
-                onClick={() => setShowFlow(false)}
+                onClick={() => {
+                  setShowFlow(false);
+                  setIsHovered(false);
+                }}
               >
                 <span
-                  className={`flex justify-center items-center w-full h-full rounded-[8px] bg-[#383838] hover:bg-[#383838]/80  text-white`}
+                  className={`flex justify-center items-center w-full h-[-webkit-fill-available] rounded-[8px] bg-[#383838] hover:bg-[#383838]/80  text-white`}
                 >
                   Voltar
                 </span>
@@ -93,7 +115,7 @@ export default function LexEnergyAllianceCardV2({
           <div className="flex flex-col gap-6 text-white">
             <div>
               <span className="inline-flex rounded-full border border-white/20 px-3 py-1 text-xs text-white/70">
-                Soluções
+                Benefícios
               </span>
               <h3 className="mt-4 text-xl font-semibold leading-snug">
                 Revolucionamos o setor energético com tecnologia de ponta e

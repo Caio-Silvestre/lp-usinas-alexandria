@@ -24,14 +24,30 @@ export default function LexEnergyAllianceCard() {
     }
   }, [showFlow]);
 
+  // Controlar scroll da página
+  useEffect(() => {
+    if (showFlow && expanded) {
+      // Desativar scroll da página
+      document.body.style.overflow = "hidden";
+    } else {
+      // Reativar scroll da página
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup: sempre reativar scroll quando componente desmontar
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showFlow, expanded]);
+
   if (showFlow) {
     return (
       <div
-        className={`absolute  z-80 overflow-hidden transition-all duration-500 ease-out ${
-          expanded ? "left-0 w-screen" : "w-0"
+        className={`fixed inset-0 z-80 overflow-y-auto transition-all duration-500 ease-out ${
+          expanded ? "opacity-100" : "opacity-0 pointer-events-none"
         } bg-[url('/images/full-background.png')] bg-cover bg-center`}
       >
-        <div className=" relative h-full w-full px-6 md:px-12 py-8 md:py-12">
+        <div className="relative min-h-full w-full px-6 md:px-12 py-8 md:py-12">
           <Image
             src="/svgs/lex_energy_alliance_vazada_branca_retangular.svg"
             alt="Lex Energy Alliance"
@@ -88,7 +104,7 @@ export default function LexEnergyAllianceCard() {
                   onClick={() => setShowFlow(false)}
                 >
                   <span
-                    className={`flex justify-center items-center w-full h-full rounded-[8px] bg-[#383838] hover:bg-[#383838]/80  text-white`}
+                    className={`flex justify-center items-center w-full h-[-webkit-fill-available] rounded-[8px] bg-[#383838] hover:bg-[#383838]/80  text-white`}
                   >
                     Voltar
                   </span>
@@ -167,7 +183,7 @@ export default function LexEnergyAllianceCard() {
         <div className="text-center">
           <p
             className={`text-sm mb-2 ${
-              isHovered ? "text-white/80" : "text-[#666666]"
+              isHovered ? "text-white/80" : "text-[#333333]"
             }`}
           >
             Resolvemos o maior desafio da sua usina: manter ela cheia, rentável
@@ -175,7 +191,7 @@ export default function LexEnergyAllianceCard() {
           </p>
           <p
             className={`text-sm ${
-              isHovered ? "text-white/80" : "text-[#666666]"
+              isHovered ? "text-white/80" : "text-[#333333]"
             }`}
           >
             Enquanto assumimos toda a operação crítica, você participa de uma

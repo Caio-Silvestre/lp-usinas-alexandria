@@ -137,14 +137,14 @@ export default function FAQSection() {
     <section className="w-full">
       <SectionTitle>F A Q</SectionTitle>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-3 gap-[100px]">
         {/* Coluna Esquerda - Seleção de Temas */}
         <div className="space-y-4 col-span-3 md:col-span-1">
           <div className="h-fit">
             <h2 className="text-3xl font-semibold text-[#1A1A1A]">
               Perguntas frequentes
             </h2>
-            <p className="text-[#666666] max-w-2xl">
+            <p className="text-[#333333] text-[14px] max-w-2xl">
               Reunimos aqui as principais dúvidas sobre a parceria com a
               Alexandria. Encontre respostas rápidas sobre contrato,
               responsabilidades e benefícios para o dono da usina.
@@ -159,7 +159,7 @@ export default function FAQSection() {
               className={`w-full flex items-center gap-3 p-4 rounded-lg text-left transition-all duration-200 ${
                 selectedTheme === theme.id || hoveredTheme === theme.id
                   ? "bg-[#FAFAFA] text-[#1A1A1A]"
-                  : "hover:bg-[#FAFAFA] text-[#666666]"
+                  : "hover:bg-[#FAFAFA] text-[#333333]"
               }`}
             >
               <theme.icon
@@ -206,7 +206,7 @@ export default function FAQSection() {
                   </span>
                 </div>
                 <span
-                  className={`text-[#666666] transition-transform duration-200 
+                  className={`text-[#333333] transition-transform duration-200 
                       ${hoveredQuestion === index ? "scale-150" : "scale-100"}
                       ${openQuestion === index ? "rotate-180" : "rotate-0"}
                     `}
@@ -231,7 +231,7 @@ export default function FAQSection() {
 
               {openQuestion === index && (
                 <div className="px-4 pb-4">
-                  <p className="text-sm text-[#666666] leading-relaxed whitespace-pre-line">
+                  <p className="text-sm text-[#333333] leading-relaxed whitespace-pre-line">
                     {faq.answer}
                   </p>
                 </div>

@@ -17,13 +17,13 @@ export default function ClosingSection() {
             >
               Energia que move confiança
             </h2>
-            <p className="text-sm leading-6 text-[#666666] md:text-[14px]">
+            <p className="text-sm leading-6 text-[#333333] md:text-[14px]">
               A Alexandria nasceu com o propósito de transformar a forma como o
               Brasil consome e compartilha energia. Acreditamos que energia não
               é apenas um recurso, é <strong>movimento</strong>, é{" "}
               <strong>impacto</strong> e é <strong>futuro</strong>.
             </p>
-            <p className="text-sm leading-6 text-[#666666] md:text-[14px]">
+            <p className="text-sm leading-6 text-[#333333] md:text-[14px]">
               Construímos nossa reputação aliando tecnologia, governança e
               sustentabilidade. Criamos soluções que unem previsibilidade
               financeira, segurança regulatória e inovação,{" "}
@@ -46,7 +46,7 @@ export default function ClosingSection() {
           {/* Coluna direita - Card com imagem + texto */}
           <div className="col-span-2 md:col-span-1">
             <div
-              className="rounded-tl-[12px] rounded-tr-[32px] rounded-br-[12px] rounded-bl-[32px] border p-4"
+              className="rounded-tl-[12px] rounded-tr-[32px] rounded-br-[12px] rounded-bl-[32px] p-4"
               style={{
                 backgroundImage: "url('/images/ligth-background.png')",
                 backgroundSize: "cover",
@@ -55,7 +55,7 @@ export default function ClosingSection() {
             >
               <div className="h-[180px] md:h-[220px] overflow-hidden rounded-tl-[8px] rounded-tr-[24px] rounded-br-[8px] rounded-bl-[24px]">
                 <Image
-                  src="/images/escritorio-2.png"
+                  src="/images/escritorio-2.jpeg"
                   alt="Equipe em operação e gestão de energia"
                   width={640}
                   height={360}
@@ -64,7 +64,7 @@ export default function ClosingSection() {
                 />
               </div>
               <div className="mt-4 space-y-4">
-                <p className="text-sm leading-6 text-[#666666] md:text-[13px]">
+                <p className="text-sm leading-6 text-[#333333] md:text-[13px]">
                   Ao longo da nossa jornada, conquistamos credibilidade não
                   apenas pelos resultados, mas pelo jeito de fazer:
                   transparente, colaborativo e comprometido em reduzir riscos e
@@ -72,7 +72,7 @@ export default function ClosingSection() {
                   em energia limpa e como um dos protagonistas da nova economia
                   de impacto.
                 </p>
-                <p className="text-sm leading-6 text-[#666666] md:text-[13px]">
+                <p className="text-sm leading-6 text-[#333333] md:text-[13px]">
                   Estar com a Alexandria é ter um aliado estratégico. É saber
                   que sua usina não está sozinha, mas conectada a uma rede que
                   garante solidez, reconhecimento e futuro.

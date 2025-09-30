@@ -22,11 +22,11 @@ export function ImpactInfoCard({
     <Card
       className={
         isDark
-          ? "md:h-[53vh] bg-[#1A1A1A]/90 text-white bg-[url('/images/dark-background.png')] bg-cover bg-center rounded-[8px]"
-          : "md:h-[53vh] bg-white/80 text-[#1A1A1A] bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-[8px]"
+          ? "min-h-[35dvh] h-auto bg-[#1A1A1A]/90 text-white bg-[url('/images/dark-background.png')] bg-cover bg-center rounded-[8px]"
+          : "min-h-[35dvh] h-auto bg-white/80 text-[#1A1A1A] bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-[8px]"
       }
     >
-      <CardContent className="flex flex-col justify-between space-y-[8px] p-6 h-full">
+      <div className="flex flex-col justify-between gap-[8px] p-6 min-h-[35dvh] ">
         <h3
           className="text-base font-semibold"
           style={{ fontFamily: "Work Sans" }}
@@ -36,13 +36,13 @@ export function ImpactInfoCard({
         <p
           className={
             isDark
-              ? "whitespace-pre-line text-sm leading-relaxed text-white/80 md:text-[13px]  m-0 md:leading-6"
-              : "whitespace-pre-line text-sm leading-relaxed text-[#666666] md:text-[13px] m-0  md:leading-6"
+              ? "whitespace-pre-line text-sm leading-relaxed text-[white/80] md:text-[13px]  m-0 md:leading-6"
+              : "whitespace-pre-line text-sm leading-relaxed text-[#333333] md:text-[13px] m-0  md:leading-6"
           }
         >
           {body}
         </p>
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex justify-center items-end">
           <Button
             variant="secondary"
             className={
@@ -55,15 +55,15 @@ export function ImpactInfoCard({
             <span
               className={
                 isDark
-                  ? "bg-[#303030] flex flex-row justify-center items-center w-full h-full rounded-[8px]"
-                  : "bg-[#f3f3f3] flex flex-row justify-center items-center w-full h-full rounded-[8px]"
+                  ? "sm:text-[8px] md:text-[14px] h-[-webkit-fill-available] bg-[#303030] flex flex-row justify-center items-center w-full  rounded-[8px]"
+                  : "sm:text-[8px] md:text-[14px] h-[-webkit-fill-available] bg-[#f3f3f3] flex flex-row justify-center items-center w-full  rounded-[8px]"
               }
             >
-              {cta} <ArrowsClockwiseIcon size={18} className="ml-5" />
+              {cta} <ArrowsClockwiseIcon className="hidden md:block ml-2" />
             </span>
           </Button>
         </div>
-      </CardContent>
+      </div>
     </Card>
   );
 }

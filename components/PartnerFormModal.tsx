@@ -174,7 +174,7 @@ export function PartnerFormModal({
           variant="primary"
           size="lg"
           className={cn(
-            "z-10 flex w-full max-w-[340px] rounded-[8px] px-4 py-3 justify-center items-center gap-2",
+            "z-10 flex w-full max-w-[340px] rounded-[8px] px-4 py-3 justify-center items-center gap-2 ",
             triggerClassName
           )}
         >
@@ -297,7 +297,7 @@ export function PartnerFormModal({
                       inputMode="numeric"
                       {...methods.register("plantPower")}
                     />
-                    <p className="text-xs text-[#666666] mt-1">
+                    <p className="text-xs text-[#333333] mt-1">
                       *Campo obrigatório
                     </p>
                   </FormField>

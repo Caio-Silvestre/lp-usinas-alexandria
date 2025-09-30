@@ -29,6 +29,7 @@ export default function LexEnergyAllianceCardV2Main() {
         showFlow={showFlow}
         expanded={expanded}
         setShowFlow={setShowFlow}
+        setIsHovered={setIsHovered}
       />
     );
   }
@@ -66,20 +67,22 @@ export default function LexEnergyAllianceCardV2Main() {
             )}
           </div>
           <h2
-            className={`text-2xl font-bold mb-4 ${
+            className={`text-2xl font-normal mb-4 font-normal  ${
               isHovered ? "text-white" : "text-[#1A1A1A]"
             }`}
           >
-            Alexandria
+            Lex Energy
             <br />
-            Energia
+            <span className="font-bold" style={{ fontFamily: "Work Sans" }}>
+              Alliance
+            </span>
           </h2>
         </div>
 
         <div className="text-center">
           <p
             className={`text-sm mb-2 ${
-              isHovered ? "text-white/80" : "text-[#666666]"
+              isHovered ? "text-white/80" : "text-[#333333]"
             }`}
           >
             Transformamos o mercado de energia com tecnologia inovadora e
@@ -87,7 +90,7 @@ export default function LexEnergyAllianceCardV2Main() {
           </p>
           <p
             className={`text-sm ${
-              isHovered ? "text-white/80" : "text-[#666666]"
+              isHovered ? "text-white/80" : "text-[#333333]"
             }`}
           >
             Nossa plataforma conecta usinas, clientes e investidores em um
@@ -106,7 +109,7 @@ export default function LexEnergyAllianceCardV2Main() {
             onClick={handleButtonClick}
           >
             <span
-              className={`flex justify-center items-center w-full h-full rounded-[8px]
+              className={`flex justify-center items-center w-full h-[-webkit-fill-available] rounded-[8px]
                 ${
                   isHovered
                     ? "bg-[#383838] hover:bg-[#383838]/80 text-white"

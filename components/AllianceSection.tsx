@@ -18,7 +18,7 @@ export default function AllianceSection() {
               Previsibilidade para a operação. Reputação para o mercado.
             </h2>
 
-            <div className="bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-tl-[12px] rounded-tr-[32px] rounded-br-[12px] rounded-bl-[32px] border p-4">
+            <div className="bg-[url('/images/ligth-background.png')] bg-cover bg-center rounded-tl-[12px] rounded-tr-[32px] rounded-br-[12px] rounded-bl-[32px]  p-4">
               <div className="h-[258px] overflow-hidden rounded-tl-[8px] rounded-tr-[24px] rounded-br-[8px] rounded-bl-[24px]">
                 <video
                   src="/videos/usinas-eolicas.mp4"
@@ -38,7 +38,7 @@ export default function AllianceSection() {
                 >
                   O que é Lex Energy Alliance?
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-[#666666] text-[14px]">
+                <p className="mt-2 text-sm leading-6 text-[#333333] text-[14px]">
                   Uma comunidade estratégica que conecta usinas em todo o
                   Brasil, oferecendo inteligência de mercado, oportunidades de
                   networking e um selo de reconhecimento que garante
@@ -61,7 +61,7 @@ export default function AllianceSection() {
                 Tenha um diferencial competitivo que garanta que sua usina nunca
                 fique no risco da vacância.
               </h3>
-              <p className="text-sm leading-6 text-[#666666] text-[14px]">
+              <p className="text-sm leading-6 text-[#333333] text-[14px]">
                 Você adquire segurança regulatória com ANEEL/CEEE, automação
                 financeira com billing e split bancário, além de ciclos de
                 receita que trazem tranquilidade de orçamentação da usina. Não é

@@ -33,7 +33,7 @@ export function SuccessMessage({
           />
         </div>
         <h2 className="text-2xl font-bold text-[#1A1A1A]">{title}</h2>
-        <p className="text-sm text-[#666666] leading-relaxed max-w-md mx-auto">
+        <p className="text-sm text-[#333333] leading-relaxed max-w-md mx-auto">
           {message}
         </p>
       </div>
@@ -53,10 +53,10 @@ export function SuccessMessage({
                 Confirmação de contato
               </h3>
               {userEmail && (
-                <p className="text-xs text-[#666666]">E-mail: {userEmail}</p>
+                <p className="text-xs text-[#333333]">E-mail: {userEmail}</p>
               )}
               {userPhone && (
-                <p className="text-xs text-[#666666]">Telefone: {userPhone}</p>
+                <p className="text-xs text-[#333333]">Telefone: {userPhone}</p>
               )}
             </div>
           </div>
@@ -74,7 +74,7 @@ export function SuccessMessage({
               <h3 className="text-sm font-semibold text-[#1A1A1A]">
                 Contato via WhatsApp em até 48 horas
               </h3>
-              <p className="text-xs text-[#666666] leading-relaxed">
+              <p className="text-xs text-[#333333] leading-relaxed">
                 Nossa equipe entrará em contato em breve por WhatsApp. Caso não
                 consigamos contato, verifique sua caixa de e-mail (incluindo a
                 pasta de spam).
@@ -88,14 +88,14 @@ export function SuccessMessage({
           <div className="flex items-start gap-3">
             <ClockIcon
               size={20}
-              className="text-[#666666] flex-shrink-0 mt-0.5"
+              className="text-[#333333] flex-shrink-0 mt-0.5"
               weight="regular"
             />
             <div className="space-y-1">
               <h3 className="text-sm font-semibold text-[#1A1A1A]">
                 Integração na Lex Energy Alliance
               </h3>
-              <p className="text-xs text-[#666666] leading-relaxed">
+              <p className="text-xs text-[#333333] leading-relaxed">
                 Se a usina atender aos critérios da Alexandria, nossa equipe
                 entrará em contato para iniciar a negociação e integrar
                 oficialmente a usina à Lex Energy Alliance.

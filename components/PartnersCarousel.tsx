@@ -17,7 +17,7 @@ export default function PartnersCarousel() {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <p className="mb-4 text-center text-xs text-[#666666]">
+        <p className="mb-4 text-center text-xs text-[#333333]">
           Parceiros que fazem parte da nossa energia
         </p>
       </div>
@@ -30,7 +30,7 @@ export default function PartnersCarousel() {
                 alt={`logo-${i}`}
                 width={176}
                 height={100}
-                className="h-full w-[100px] md:w-[176px] object-contain"
+                className="h-full w-[100px] md:w-[150px] object-contain"
               />
             </div>
           ))}

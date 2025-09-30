@@ -40,12 +40,12 @@ export default function ImpactCards() {
           >
             Sua usina não pode parar na geração. Precisa gerar resultado.
           </h2>
-          <p className="mt-4 max-w-md text-sm text-[#666666]">
+          <p className="mt-4 max-w-md text-sm text-[#333333]">
             Sozinhas, as usinas produzem energia. Mas também enfrentam riscos:
             ausência de clientes, inadimplência, e uma taxa de previsibilidade
             financeira.
           </p>
-          <p className="mt-4 max-w-2xl text-sm text-[#666666]">
+          <p className="mt-4 max-w-2xl text-sm text-[#333333]">
             Com a nossa gestão completa, sua operação ganha estabilidade e
             escala.
           </p>

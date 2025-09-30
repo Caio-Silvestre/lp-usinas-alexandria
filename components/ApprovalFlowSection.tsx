@@ -49,7 +49,7 @@ export default function ApprovalFlowSection() {
               >
                 {step.title}
               </h3>
-              <p className="text-sm text-[#666666] leading-6">
+              <p className="text-sm text-[#333333] leading-6">
                 {step.description}
               </p>
             </div>
