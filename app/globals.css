@@ -58,6 +58,9 @@
   .border-border { border-color: var(--border); }
   .bg-background { background-color: var(--background); }
   .text-foreground { color: var(--foreground); }
+  .normal-line {
+    line-height: auto !important;
+  }
 }
 
 /* Flip 3D utilities */

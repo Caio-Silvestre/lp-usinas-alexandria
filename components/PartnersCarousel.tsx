@@ -24,13 +24,13 @@ export default function PartnersCarousel() {
       <div className="relative w-full overflow-hidden">
         <div className="flex w-max animate-[scroll_30s_linear_infinite] gap-8 pr-8 max-w-none">
           {items.map((src, i) => (
-            <div key={i} className="shrink-0">
+            <div key={i} className="shrink-0 w-[100px] md:w-[150px] p-0 md:p-4">
               <Image
                 src={src}
                 alt={`logo-${i}`}
                 width={176}
                 height={100}
-                className="h-full w-[100px] md:w-[150px] object-contain"
+                className="h-full  object-contain"
               />
             </div>
           ))}
