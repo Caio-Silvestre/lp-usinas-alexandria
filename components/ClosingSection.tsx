@@ -5,7 +5,7 @@ export default function ClosingSection() {
   return (
     <section className="w-full">
       <div className="flex flex-col items-start justify-between w-full ">
-        <SectionTitle>Sobre</SectionTitle>
+        <SectionTitle>Sobre Alexandria</SectionTitle>
 
         <div className="mx-auto grid w-full grid-cols-2 gap-8">
           {/* Coluna esquerda - Texto + Imagem maior */}
